@@ -1,11 +1,6 @@
 require('dotenv').config()
 
-const TWILIO_BASE_URL = 'https://verify.twilio.com/v2/'
-const TWILIO_ACCOUNT_SID = 'AC34612da44fa500d68505a093a80dc296'
-const TWILIO_AUTH_TOKEN = '6ba6d516fd66c051e1867c44d7384d88'
-
-const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
-const { application } = require('express');
+const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors')
