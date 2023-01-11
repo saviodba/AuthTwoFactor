@@ -16,7 +16,7 @@ app.use(cors())
         
         let phone = req.body.phone
          
-        client.verify.v2.services('VA26cea0c73b6f8e4a017b40c78a3caacf')
+        client.verify.v2.services(process.env.TWILIO_V2_SERVICES)
             .verifications
             .create(
                 {
@@ -54,7 +54,7 @@ app.use(cors())
 
             client.
             verify.v2
-            .services('VA26cea0c73b6f8e4a017b40c78a3caacf')
+            .services(process.env.TWILIO_V2_SERVICES)
             .verificationChecks
             .create({to: `+55${ phone}}`,code })
             .then(verification =>{
@@ -78,11 +78,9 @@ app.use(cors())
 
 
     })
-
-
     
-
     let port = process.env.PORT || 3000
+
     app.listen(port, ()=>{
         console.log('Server OnLine...')
     })
