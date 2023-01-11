@@ -60,13 +60,12 @@ app.use(cors())
             .then(verification =>{
                 if(verification.status == "approved"){
                     res.status(200).json({
-                        status:"Conexão realizada com sucesso"
+                        status:true
                     })
-                }
-            
-           
+                }                       
             }).catch(error=>{
                 res.status(400).json({
+                    status:false,
                     erro:`Falha ao realizar a validação do codigo. Erro ${error.code}`,
                     moreInfo: `https://www.twilio.com/docs/errors/${error.code}`
                 })
