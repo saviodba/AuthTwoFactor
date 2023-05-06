@@ -1,5 +1,5 @@
 {
-  "name": "authy-two-factor",
+  "name": "auth-two-factor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
