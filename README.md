@@ -1,5 +1,4 @@
 # Bem-vindo(a) ao Meu Repositório!
-##Auth Two Factor
 
 ## Visão Geral
 Este repositório contém o código-fonte e os arquivos relacionados a AuthTwoFactor. 
